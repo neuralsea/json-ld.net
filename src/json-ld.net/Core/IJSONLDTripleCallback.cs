@@ -1,5 +1,10 @@
 using JsonLD.Core;
+
+#if !IS_CORECLR3 
 using Newtonsoft.Json.Linq;
+#else
+using System.Text.Json;
+#endif
 
 namespace JsonLD.Core
 {

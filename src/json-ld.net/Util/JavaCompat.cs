@@ -1,4 +1,10 @@
-﻿using Newtonsoft.Json.Linq;
+﻿
+#if !IS_CORECLR3 
+using Newtonsoft.Json.Linq;
+#elif IS_CORECLR3
+using Newtonsoft.Json.Linq;
+using System.Text.Json;
+#endif
 using System;
 using System.Collections;
 using System.Collections.Generic;

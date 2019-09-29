@@ -3,7 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 using JsonLD.Util;
+
+#if !IS_CORECLR3 
 using Newtonsoft.Json.Linq;
+#elif IS_CORECLR3
+using Newtonsoft.Json.Linq;
+using System.Text.Json;
+#endif
 
 namespace JsonLD.Util
 {

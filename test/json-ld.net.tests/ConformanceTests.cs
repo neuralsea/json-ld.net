@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-using Newtonsoft.Json.Linq;
 using Xunit;
 using Xunit.Extensions;
 using System.IO;
-using Newtonsoft.Json;
 using JsonLD.Core;
 using JsonLD.Util;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace JsonLD.Test
 {

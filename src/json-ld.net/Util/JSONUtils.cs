@@ -2,9 +2,17 @@ using System;
 using System.Collections;
 using System.IO;
 using JsonLD.Util;
-using Newtonsoft.Json;
-using System.Net;
+
+#if !IS_CORECLR3 
 using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
+#elif IS_CORECLR3
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
+using JsonSerializer = Newtonsoft.Json.JsonSerializer;
+using System.Text.Json;
+#endif
+using System.Net;
 
 namespace JsonLD.Util
 {
